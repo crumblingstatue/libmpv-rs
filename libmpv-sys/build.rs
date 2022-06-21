@@ -35,10 +35,8 @@ fn main() {
 #[cfg(feature = "bindgen")]
 fn main() {
     let bindings = bindgen::Builder::default()
-        .header("include/client.h")
-        .header("include/render.h")
-        .header("include/render_gl.h")
-        .header("include/stream_cb.h")
+        .header("/usr/include/mpv/client.h")
+        .header("/usr/include/mpv/render.h")
         .impl_debug(true)
         .opaque_type("mpv_handle")
         .opaque_type("mpv_render_context")
